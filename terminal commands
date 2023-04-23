@@ -1,0 +1,7 @@
+npm i -g solc
+cd contracts
+solcjs --bin --abi password_manager.sol //Compile the contract and generates the ABI and bytecode
+
+npm i truffle
+truffle init
+truffle compile

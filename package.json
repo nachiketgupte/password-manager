@@ -1,0 +1,28 @@
+{
+  "name": "password-manager",
+  "version": "1.0.0",
+  "description": "Application to manage passwords",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nachiket",
+  "license": "ISC",
+  "dependencies": {
+    "@drizzle/store": "^1.5.3",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.0-alpha3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "ganache-cli": "^6.12.2",
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7",
+    "solc": "^0.8.7",
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.9.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

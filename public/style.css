@@ -1,0 +1,14 @@
+.connections{
+    margin-top: 50px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.main{
+    background-color: lightblue;
+}
+
+#accountArea{
+    display: block;
+    padding: 30px;
+}

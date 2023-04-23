@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body class="main">
+    <button type="button" class="btn btn-light connections" data-mdb-ripple-color="dark" onclick="connectMetamask()">Connect to Metmask</button>
+    <button type="button" class="btn btn-light connections" data-mdb-ripple-color="dark" onclick="connectContract()">Connect to Contract</button>
+    <button type="button" class="btn btn-light connections" data-mdb-ripple-color="dark" onclick="add()">Fetch data</button>
+    <p id="accountArea"></p>
+</body>
+    
+    <script>
+        const connectMetamask = async()=>{
+            if(window.ethereum !== 'undefined'){
+                const accounts = await ethereum.request({method:"eth_requestAccounts"});
+                account = accounts[0]; // Grabs the first account
+                for (let i = 0; i < accounts.length; i++) {
+                    console.log(accounts[i]);                    
+                }
+                document.getElementById("accountArea").innerText = account;
+            }
+        }
+
+        const connectContract = async()=>{
+            const ABI = '';
+            let Address = "";
+            window.web3 = await new web3(window.ethereum)
+            window.contract = await new window.web3.eth.Contract(ABI, address);
+            document.getElementById('contractArea').innerText = "Connected to Smart Contract";
+        }
+
+        
+    </script>
+</html>
